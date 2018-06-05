@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+	{% for picture in pictures %}
+		<a href="index.php?page=create&base={{ picture['file_name'] }}">
+			<img src="assets/img/{{ picture['file_name'] }}" alt="{{ picture['file_name'] }}">
+		</a>
+	{% endfor %}
+{% endblock %}

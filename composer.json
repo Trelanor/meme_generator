@@ -1,0 +1,12 @@
+{
+    "name": "stagiaire/memes_generator",
+    "authors": [
+        {
+            "name": "Trelanor",
+            "email": "trelanor@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.0"
+    }
+}
