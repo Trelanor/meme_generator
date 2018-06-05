@@ -24,10 +24,13 @@
 		]);
 	}
 	
-	function generateMeme() {
+	function generateMemeCtrl() {
+		//$path = '/home/psaulay/projets/meme_generatorV2/generated_img';
+		include 'models/MemeModel.php';
+
 		// get form submission (or defaults)
-		$firstP    = $_GET['first_paragraphe'];
-		$secondP = $_GET['second_paragraphe'];
+		$firstP    = 'test1' ;//$_GET['first_paragraphe'];
+		$secondP = 'test2' ;//$_GET['second_paragraphe'];
 		$filename    = memegen_sanitize( $secondP ? $secondP : $firstP );
 		$base = $_GET['base'];
 		// setup args for image
@@ -35,15 +38,16 @@
 			'top_text'    => $firstP,
 			'bottom_text' => $secondP,
 			'filename'    => $filename,
-			'font'        => dirname(__FILE__) .'/assets/font/Anton.ttf',
-			'memebase'    => dirname(__FILE__) ."/assets/img/".$base."",
+			'font'        => realpath(dirname(__FILE__) .'/../assets/font/Anton.ttf'),
+			'memebase'    => realpath(dirname(__FILE__) ."/../assets/img/".$base.""),
 			'textsize'    => 40,
 			'textfit'     => true,
 			'padding'     => 10,
 		);
 	
+		$filename = memegen_build_image( $settings );
 		// create and output image
-		memegen_build_image( $settings );
+		// move_uploaded_file( );
 	}
 	
     

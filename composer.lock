@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "25deeeece2cc8f0e9d7c14ad50509d66",
     "content-hash": "9cab9d378e75d354a789d2df453725c6",
     "packages": [
         {
@@ -63,7 +64,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-04-26 10:06:28"
         },
         {
             "name": "twig/twig",
@@ -129,7 +130,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2018-04-02T09:24:19+00:00"
+            "time": "2018-04-02 09:24:19"
         }
     ],
     "packages-dev": [],

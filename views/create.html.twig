@@ -1,8 +1,16 @@
-<center>
-	<form>
-		<p>zone-texte1:<br/><input name="first_paragraphe"/></p>
-		<p>zone-texte2:<br/><input name="second_paragraphe"/></p>
-		<input hidden name="base" value="{{ base }}" />
-		<p><input type="submit" /></p>
-	</form>
-</center>
+{% extends "base.html.twig" %}
+	{% block content %}
+		<center>
+			<form>
+				<p>zone-texte1:<br/><input id="first_paragraphe" name="first_paragraphe"/></p>
+				<p>zone-texte2:<br/><input id="second_paragraphe" name="second_paragraphe"/></p>
+				<input hidden name="base" value="{{ base }}" />
+				<input hidden name="page" value="generated" />
+				<p><input type="submit" /></p>
+			</form>
+			<div class="base" style="width:600px;height:600px;background-image:url(assets/img/{{ base }})">
+				<p style="font-family:Anton;color:white;font-size:50px" id="first">zone-texte1</p>
+				<p style="font-family:anton;color:white;font-size:50px;margin-top:70%" id="second">zone-texte2</p>
+			</div>
+		</center>
+	{% endblock %}

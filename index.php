@@ -20,6 +20,10 @@
         case 'create':
             createMeme();
         break;
+
+        case 'generated':
+            generateMemeCtrl();
+        break;
     }
 
 ?>
