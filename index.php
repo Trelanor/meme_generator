@@ -20,6 +20,10 @@
         case 'create':
             createMeme();
         break;
+        
+        case 'render':
+            memegen_build_image();
+        break;
     }
 
 ?>
