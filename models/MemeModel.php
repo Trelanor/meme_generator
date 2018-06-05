@@ -26,22 +26,23 @@
         $bottom_text = strtoupper( trim( $settings['bottom_text'] ) );
 
         $fit = isset( $textfit ) ? $textfit : true;
-
         // top layer text
         extract( memegen_font_size_guess( $textsize, ($width-$padding*2), $font, $top_text, $fit ) );
         $from_side = ($width - $box_width)/2;
         $from_top = $box_height + $padding;
+        
         // imagettftext( $im, $textsize, $angle, $from_side, $from_top, $textcolor, $font, $top_text );
         memegen_imagettfstroketext( $im, $fontsize, $angle, $from_side, $from_top, $textcolor, $black, $font, $top_text, 1 );
-
         // bottom layer text
         extract( memegen_font_size_guess( $textsize, ($width-$padding*2), $font, $bottom_text, $fit ) );
         $from_side = ($width - $box_width)/2;
         $from_top = $height - $padding;
+        
         // imagettftext( $im, $textsize, $angle, $from_side, $from_top, $textcolor, $font, $bottom_text );
         memegen_imagettfstroketext( $im, $fontsize, $angle, $from_side, $from_top, $textcolor, $black, $font, $bottom_text, 1 );
 
         $basename = basename( $settings['memebase'], '.jpg' );
+        
         // output
         // header('Content-Type: image/jpeg');
         // header('Content-Disposition: filename="'. $basename .'-'. $filename .'.jpg"');
