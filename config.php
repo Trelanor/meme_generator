@@ -10,8 +10,8 @@
 	
 	  'host'      => 'localhost',
 	  'database'  => 'meme',
-	  'user'      => 'psaulay',
-	  'password'  => ''
+	  'user'      => 'root',
+	  'password'  => 'root'
 	
 	];
 

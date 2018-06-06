@@ -12,4 +12,4 @@ function live_view(){
 }
 
 document.addEventListener('keyup', live_view );
-document.addEventListener('click', live_view )
+document.addEventListener('click', live_view );

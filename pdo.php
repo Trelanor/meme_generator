@@ -5,7 +5,7 @@
 		require 'config.php';
 	
 		$host       = $config['host'];
-		$bdd         = $config['database'];
+		$bdd        = $config['database'];
 		$user       = $config['user'];
 		$password   = $config['password'];
 
@@ -31,6 +31,6 @@
 		return $pdo;
 	}
 	
-	$bdd = connect();
+	
 
 ?>
