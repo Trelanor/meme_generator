@@ -10,9 +10,7 @@
         $results = $allPictures->fetchAll();
         //echo '<pre>'; var_dump($results); echo '</pre>'; die();
     
-		//foreach($results as $result){
-		//	echo "<a href='index.php?page=create&base=".$result['file_name']."'><img src='assets/img/".$result['file_name']."'></a>";
-		//}
+		
 		
 		echo $twig->render('home.html.twig', [
 			'pictures' => $results

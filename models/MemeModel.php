@@ -52,12 +52,10 @@
         $generatedFilename = uniqid().'.jpg';
         $base_id_request = $bdd->prepare("SELECT id FROM base WHERE file_name LIKE ?");
         $base_id_request->execute(array($basename2));
-
         $base= $base_id_request->fetch();
         $base_id = $base["id"];
-
-		//var_dump("INSERT INO 'usermeme' ('file_name', 'base_id') VALUES ('$generatedFilename','$base_id')"); die();
-        $upload = $bdd->prepare("INSERT INTO usermeme (file_name, base_id, creator_ip) VALUES ('$generatedFilename','$base_id', '".get_ip()."')");
+        $upload = $bdd->prepare("INSERT INTO usermeme (file_name, base_id, creator_ip)
+								VALUES ('$generatedFilename','$base_id', '".get_ip()."')");
         $upload->execute();
         header('Content-Type: image/jpeg');
         header('Content-Disposition: filename="'. $basename .'-'. $filename .'.jpg"');
