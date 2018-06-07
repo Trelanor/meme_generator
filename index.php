@@ -24,6 +24,10 @@
         case 'generated':
             generateMemeCtrl();
         break;
+
+        case 'result':
+            showMemeResult();
+        break;
     }
 
 ?>

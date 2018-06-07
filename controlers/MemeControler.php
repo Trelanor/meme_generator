@@ -23,20 +23,18 @@
 			'base' => $_GET['base']
 		]);
 	}
+
 	
 	function generateMemeCtrl() {
-		//$path = '/home/psaulay/projets/meme_generatorV2/generated_img';
 		include 'models/MemeModel.php';
-
+		// echo '<pre>'; var_dump($_POST); echo '</pre>'; 
 		// get form submission (or defaults)
-		$firstP    = $_GET['first_paragraphe'];
-		$secondP = $_GET['second_paragraphe'];
-		$filename    = memegen_sanitize( $secondP ? $secondP : $firstP );
-		$base = $_GET['base'];
+		$filename    = memegen_sanitize( $_POST['second_paragraphe'] ? $_POST['second_paragraphe'] : $_POST['first_paragraphe'] );
+		$base = $_POST['base'];
 		// setup args for image
 		$settings = array(
-			'top_text'    => $firstP,
-			'bottom_text' => $secondP,
+			'top_text'    => $_POST['first_paragraphe'],
+			'bottom_text' => $_POST['second_paragraphe'],
 			'filename'    => $filename,
 			'font'        => realpath(dirname(__FILE__) .'/../assets/font/Anton.ttf'),
 			'memebase'    => realpath(dirname(__FILE__) ."/../assets/img/".$base.""),
@@ -44,10 +42,18 @@
 			'textfit'     => true,
 			'padding'     => 10,
 		);
-	
 		$filename = memegen_build_image( $settings );
-		// create and output image
-		// move_uploaded_file( );
+		//return generateMemeCtrl();
+	}
+
+	function showMemeResult() {
+		$server_url = 'http://localhost/meme_generator/';
+		global $twig; 
+		echo $twig->render('show.html.twig', [
+			'file_name' => $_GET['file_name'],
+			'server_url' => $server_url,
+			'img_name' => $_GET['img_name'],
+		]);
 	}
 	
     function get_ip() {
