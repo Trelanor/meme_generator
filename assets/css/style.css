@@ -2,3 +2,54 @@
 	font-family: "Anton";
 	src: url('../font/Anton.ttf');
 }
+
+a.mt-share-inline-bar-sm img {
+	width: 34px;
+	height: auto;
+	border: 0px none;
+  }
+  a.mt-share-inline-bar-sm:hover {
+	z-index: 50;
+	transform: scale3d(1.075, 1.075, 1.075);
+  }
+  a.mt-share-inline-bar-sm {
+	display: inline-block;
+	width: 64px;
+	height: 32px;
+	border-radius: 0px;
+	margin-right: 0px;
+	text-align: center;
+	position: relative;
+	transition: all 100ms ease-in 0s;
+	transform: scale3d(1, 1, 1);
+  }
+  .mt-google:hover {
+	background-color: rgb(225, 95, 79);
+  }
+  .mt-google {
+	background-color: rgb(221, 75, 57);
+  }
+  .mt-linkedin:hover {
+	background-color: rgb(16, 135, 192);
+  }
+  .mt-linkedin {
+	background-color: rgb(14, 118, 168);
+  }
+  .mt-twitter:hover {
+	background-color: rgb(8, 187, 255);
+  }
+  .mt-twitter {
+	background-color: rgb(0, 172, 238);
+  }
+  .mt-facebook:hover {
+	background-color: rgb(66, 100, 170);
+  }
+  .mt-facebook {
+	background-color: rgb(59, 89, 152);
+  }
+  .mt-pinterest:hover {
+	background-color: rgb(221, 42, 48);
+  }
+  .mt-pinterest {
+	background-color: rgb(204, 33, 39);
+  }
