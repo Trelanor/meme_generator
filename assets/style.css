@@ -1,0 +1,231 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: "troficanos";
+    src: url('fonts/Troficanos.woff'),
+         url('fonts/troficanos.otf'),
+         url('fonts/Troficanos.ttf');
+}
+
+html {
+    background-color: #f2f2f2;
+    background: url('images/background.png');
+}
+
+header {
+    height: 63px;
+    background: linear-gradient(#526760,#374B4A);
+    box-shadow: 1px 1px 8px rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.308),rgb(0, 0, 0));
+}
+
+.input_index {
+    height: 25px;
+    width: 100%;
+    background: white;
+    font-size: 1.1em;
+    font-family: Arial;
+    text-align: center;
+    border-radius: 3px;
+    border: 3px solid #de8c2f;
+    box-shadow: 1px 1px 6px #555;
+}
+
+.center_img {
+    text-align: center;
+}
+
+.titre_bar {
+    background: #de8c2f;
+    width: 100%;
+    margin: auto;
+    margin-top: 65px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: "troficanos", Trebuchet MS, sans-serif;
+    font-size: 2em;
+    color: white;
+    letter-spacing: 3px;
+    padding-top: 3px;
+}
+
+/*/////////////////////////////////////////////////////////////////*/
+/*////////////////////////////// H1 ///////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+
+@-webkit-keyframes rise {
+    0% {padding-top: 50%;}
+    60% {padding-top: 3%;}
+    80% {padding-top: 3%; border-bottom: 0px solid #fff; opacity: 0.5; text-shadow: 2px 2px 5px #fff;}
+    100% {padding-top: 3%; border-bottom: 0.35em solid #fff; opacity: 1; text-shadow: 0;}
+  }
+  
+  @keyframes rise {
+    0% {padding-top: 50%;}
+    60% {padding-top: 3%;}
+    80% {padding-top: 3%; border-bottom: 0px solid #526760; opacity: 0.5; text-shadow: 2px 2px 200px rgba(255, 255, 255, 1);}
+    100% {padding-top: 3%; border-bottom: 0.35em solid  #526760;opacity: 1; text-shadow: 200px 200px 200px rgba(255, 255, 255, 0);}
+  }
+  
+  
+  .rise-text {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    opacity: 0;
+    padding-top: 40%;
+    color: #ffffff;
+    background-color: #00000042;
+    border-bottom: 0;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-family: "troficanos", Trebuchet MS, sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    font-weight: normal;
+    -webkit-animation-name: rise;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: cubic-bezier(0, 0.25, 0.55, 1);
+    -webkit-animaiton-fill-mode: forwards;
+    animation-name: rise;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0, 0.25, 0.55, 1);
+    animation-fill-mode: forwards;
+  }
+
+/*/////////////////////////////////////////////////////////////////*/
+/*///////////////////////// TRANSFORM /////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+
+form {
+    margin: 30px auto 0 auto;
+    text-align: center;
+}
+
+.input_size {
+    height: 25px;
+    width: 100%;
+    font-size: 1.1em;
+    font-family: Arial;
+    text-align: center;
+    border-radius: 3px;
+    border: 3px solid #de8c2f;
+    box-shadow: 1px 1px 6px #555;
+}
+
+::-webkit-input-placeholder {
+    opacity: 0.5 !important; /* for older chrome versions. may no longer apply. */
+    text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    opacity: 0.5 !important;
+    text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    opacity: 0.5 !important;
+    text-align: center;
+}
+
+:-ms-input-placeholder {  
+    opacity: 0.5 !important;
+    text-align: center;
+}
+
+/*/////////////////////////////////////////////////////////////////*/
+/*///////////////////////////// IMG ///////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+  
+.img_size {
+    border: 3px solid #526760;
+    width: 80%;
+    margin-top: 55px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px rgb(0, 0, 0);
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.img_size:hover {
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+/*/////////////////////////////////////////////////////////////////*/
+/*//////////////////////////// SLIDER /////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+
+    div#captioned-gallery { 
+      width: 100%; overflow: hidden;
+      border: 3px solid #526760;
+      border-radius: 5px;
+      margin: 35px auto 0 auto;
+      height: 80%;
+    }
+
+    figure.slider { 
+      position: relative; width: 500%;
+      font-size: 0; animation: 30s slidy infinite;
+    }
+
+    figure.slider figure { 
+      width: 20%; height: auto;
+      display: inline-block;  position: inherit; 
+    }
+
+    figure.slider img { 
+        width: 100%; height: auto; 
+    }
+
+    /* figure.slider figure figcaption { 
+      position: absolute; top: 0;
+      background: rgba(0,0,0,0.4);
+      color: #fff; width: 100%;
+      font-size: 2rem; padding: .6rem; 
+    } */
+
+/*/////////////////////////////////////////////////////////////////*/
+/*/////////////////////////// FOOTER //////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 53px;
+    margin-top: 5px;
+    background: linear-gradient(#526760,#374B4A);
+    box-shadow: 1px 1px 8px rgb(0, 0, 0);
+    color: white;
+    font-size: 1em;
+    font-family: Arial;
+}
