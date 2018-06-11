@@ -6,4 +6,10 @@
 			<img src="assets/img/{{ picture['file_name'] }}" alt="{{ picture['file_name'] }}">
 		</a>
 	{% endfor %}
+	<h1>Derniers memes crées</h1>
+	{% for last_entrie in last_entries %}
+		<a href='generated_img/{{ last_entrie['file_name'] }}' download='{{ last_entrie['file_name'] }}'>
+			<img src='generated_img/{{ last_entrie['file_name'] }}'>
+		</a>";
+	{% endfor %}
 {% endblock %}

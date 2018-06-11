@@ -1,7 +1,7 @@
 <?php
 
 	function getAllPictures() {
-		
+
         global $bdd;
 		$bdd = connect();
 		global $twig; 
@@ -9,11 +9,14 @@
         $allPictures->execute();
         $results = $allPictures->fetchAll();
         //echo '<pre>'; var_dump($results); echo '</pre>'; die();
-    
+		$request = $bdd->prepare("SELECT *  FROM  usermeme  ORDER BY  id  DESC  LIMIT  10");
+		$request->execute();
+		$last_entries = $request->fetchAll();
 		
 		
 		echo $twig->render('home.html.twig', [
-			'pictures' => $results
+			'pictures' => $results,
+			'last_entries' => $last_entries,
 		]);
     }
 	
@@ -43,11 +46,10 @@
 			'padding'     => 10,
 		);
 		$filename = memegen_build_image( $settings );
-		//return generateMemeCtrl();
 	}
 
 	function showMemeResult() {
-		$server_url = 'http://localhost/meme_generator/';
+		$server_url = 'localhost/meme_generator/';
 		global $twig; 
 		echo $twig->render('show.html.twig', [
 			'file_name' => $_GET['file_name'],

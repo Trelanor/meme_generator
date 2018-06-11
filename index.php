@@ -8,10 +8,7 @@
     
     require 'pdo.php';
     require __DIR__.'/controlers/MemeControler.php';
-    
 
-    
-    
     switch($_GET['page']) {
         case 'home':
             getAllPictures();
