@@ -1,9 +1,17 @@
 {
+<<<<<<< HEAD
     "name": "root/meme_generator",
     "authors": [
         {
             "name": "maximejanod",
             "email": "maxime.j@codeur.online"
+=======
+    "name": "stagiaire/memes_generator",
+    "authors": [
+        {
+            "name": "Trelanor",
+            "email": "trelanor@gmail.com"
+>>>>>>> 1555bb70c14084fec976f1db5aadc5cd87673073
         }
     ],
     "require": {
