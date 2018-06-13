@@ -5,14 +5,28 @@
 
 @font-face {
     font-family: "troficanos";
-    src: url('fonts/Troficanos.woff'),
-         url('fonts/troficanos.otf'),
-         url('fonts/Troficanos.ttf');
+    src: url('../font/Troficanos.woff'),
+         url('../font/troficanos.otf'),
+         url('../font/Troficanos.ttf');
+}
+
+@font-face {
+    font-family: "Anton";
+    src: url('../font/Anton.ttf');
+}
+
+a:link { 
+    text-decoration:none;
+    color: #de8c2f;
+}
+
+a:hover {
+    color: #ffa33a;
 }
 
 html {
     background-color: #f2f2f2;
-    background: url('images/background.png');
+    background: url('../img/background.png');
 }
 
 header {
@@ -107,7 +121,7 @@ body {
   }
 
 /*/////////////////////////////////////////////////////////////////*/
-/*///////////////////////// TRANSFORM /////////////////////////////*/
+/*//////////////////////////// CREATE /////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////*/
 
 form {
@@ -115,8 +129,8 @@ form {
     text-align: center;
 }
 
-.input_size {
-    height: 25px;
+input {
+    height: 35px;
     width: 100%;
     font-size: 1.1em;
     font-family: Arial;
@@ -124,6 +138,11 @@ form {
     border-radius: 3px;
     border: 3px solid #de8c2f;
     box-shadow: 1px 1px 6px #555;
+    background: #f5f5f5;
+}
+
+input:hover {
+    background: #ffffff;
 }
 
 ::-webkit-input-placeholder {
@@ -144,6 +163,95 @@ form {
 :-ms-input-placeholder {  
     opacity: 0.5 !important;
     text-align: center;
+}
+
+.submit {
+    width: 50%;
+    background: #5a9113c2;
+    border: 3px solid #3a5811c2;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: Arial;
+    cursor: pointer;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.submit:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background: #5a9113c2;
+}
+
+.blocPrincipal {
+    display: flex;
+    justify-content: center;
+    min-height: 600px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.overlay-image {
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    padding-left: 15px;
+    padding-right: 15px;
+   }
+
+.overlay-image .imgCreate {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px rgb(0, 0, 0);
+   }
+
+   .overlay-image, .text1 {
+    z-index: 100;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+   }
+
+   #first {
+    padding-top: 80px;
+    font-family: "Anton", Arial;
+    font-size: 3.5em;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+    }
+
+   .overlay-image, .text2 {
+    z-index: 100;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+   }
+
+#second {
+    padding-top: 430px;
+    font-family: "Anton", Arial;
+    font-size: 3.5em;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
 }
 
 /*/////////////////////////////////////////////////////////////////*/
@@ -168,49 +276,101 @@ form {
 }
 
 /*/////////////////////////////////////////////////////////////////*/
+/*////////////////////////// RENDU IMG ////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+
+.blocRendu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.renduImg {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px rgb(0, 0, 0);
+}
+
+.blocLink {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: Arial;
+    cursor: pointer;
+}
+
+/*/////////////////////////////////////////////////////////////////*/
 /*//////////////////////////// SLIDER /////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////*/
 
-@keyframes slidy {
-    0% { left: 0%; }
-    20% { left: 0%; }
-    25% { left: -100%; }
-    45% { left: -100%; }
-    50% { left: -200%; }
-    70% { left: -200%; }
-    75% { left: -300%; }
-    95% { left: -300%; }
-    100% { left: -400%; }
-    }
+@keyframes slides {
+	
+	0% {
+		left: 0;
+	}
 
-    div#captioned-gallery { 
-      width: 100%; overflow: hidden;
-      border: 3px solid #526760;
-      border-radius: 5px;
-      margin: 35px auto 0 auto;
-      height: 80%;
-    }
+	20% {
+		left: 0;
+	}
 
-    figure.slider { 
-      position: relative; width: 500%;
-      font-size: 0; animation: 30s slidy infinite;
-    }
+	25% {
+		left: -100%;
+	}
 
-    figure.slider figure { 
-      width: 20%; height: auto;
-      display: inline-block;  position: inherit; 
-    }
+	45% {
+		left: -100%;
+	}
 
-    figure.slider img { 
-        width: 100%; height: auto; 
-    }
+	50% {
+		left: -200%;
+	}
 
-    /* figure.slider figure figcaption { 
-      position: absolute; top: 0;
-      background: rgba(0,0,0,0.4);
-      color: #fff; width: 100%;
-      font-size: 2rem; padding: .6rem; 
-    } */
+	70% {
+		left: -200%;
+	}
+
+	75% {
+		left: -300%;
+	}
+
+	95% {
+		left: -400%;
+	}
+
+	100% {
+		left: -400%;
+	}
+
+}
+
+.slider {
+    border: 3px solid #526760;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px rgb(0, 0, 0);
+	width: 400px;
+    height: 400px;
+    margin: 50px auto;
+	overflow: hidden;
+}
+
+
+.slider img {
+	float: left;
+	width: 20%;
+	height: 400px;
+}
+
+.wrapper {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	animation: 10s slides infinite;
+}
 
 /*/////////////////////////////////////////////////////////////////*/
 /*/////////////////////////// FOOTER //////////////////////////////*/

@@ -1,0 +1,63 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+              <div class="col-lg-6">
+                <h1 class="rise-text">CHOISI UNE IMAGE & ENTRE TON TEXTE</h1>
+              </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+
+<div class="container">
+	<div class="center_img">
+        <div class="row">
+		
+{% for picture in pictures %}
+
+    <div class="col-sm-6 col-md-6 col-lg-3">
+		<a href="meme_{{ picture['file_name']|replace({'.jpg': ""}) }}">
+			<img class="img_size" src="assets/img/{{ picture['file_name'] }}" alt="{{ picture['file_name'] }}"></a></div>		
+	{% endfor %}
+			</div>
+        </div>
+	</div>
+
+	<div class="container">
+    	<div class="row">
+        	<div class="col-lg-0"></div>
+
+            	<div class="col-lg-12">
+                	<div class="titre_bar">DERNIERS MEMES</div>
+            			</div>
+
+            	<div class="col-lg-0"></div>
+        	</div>
+    	</div>
+
+	<div class="container">
+        <div class="row">
+			<div class="col-lg-3"></div>
+				<div class="col-lg-6">
+					<section class="slider">
+						<div class="wrapper">
+
+{% for last_entrie in last_entries %}
+
+								<a href='generated_img/{{ last_entrie['file_name'] }}' download='{{ last_entrie['file_name'] }}'>
+									<img src='generated_img/{{ last_entrie['file_name'] }}'>
+								</a>
+
+{% endfor %}
+
+</div>
+					</section>
+				</div>
+			<div class="col-lg-3"></div>
+		</div>
+    </div>
+
+{% endblock %}

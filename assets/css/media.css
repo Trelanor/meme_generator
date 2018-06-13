@@ -1,0 +1,217 @@
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////// MEDIA QUERIES //////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 1199px) {
+
+    .blocPrincipal {
+        min-height: 480px;
+    }
+
+    #first {
+        padding-top: 50px;
+        font-size: 3em;
+    }
+    #second {
+        padding-top: 370px;
+        font-size: 3em;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    .blocPrincipal {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    #first {
+        padding-top: 20px;
+        font-size: 3.1em;
+    }
+    #second {
+        padding-top: 425px;
+        font-size: 3.1em;
+    }
+  }
+
+  @media screen and (max-width: 527px) {
+
+    .blocPrincipal {
+        min-height: 450px;
+    }
+    #first {
+        padding-top: 25px;
+        font-size: 2.5em;
+    }
+    #second {
+        padding-top: 395px;
+        font-size: 2.5em;
+    }
+  }
+
+  @media screen and (max-width: 477px) {
+
+    .blocPrincipal {
+        min-height: 420px;
+    }
+    #first {
+        padding-top: 20px;
+        font-size: 2em;
+    }
+    #second {
+        padding-top: 375px;
+        font-size: 2em;
+    }
+  }
+
+@media screen and (max-width: 452px) {
+
+    .slider {
+        width: 300px;
+        height: 300px;
+    }
+    .slider img {
+        height: 300px;
+    }
+  }
+
+  @media screen and (max-width: 435px) {
+
+    .blocPrincipal {
+        min-height: 380px;
+    }
+    #first {
+        padding-top: 20px;
+        font-size: 1.8em;
+    }
+    #second {
+        padding-top: 335px;
+        font-size: 1.8em;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+
+    .blocPrincipal {
+        min-height: 330px;
+    }
+    #first {
+        padding-top: 10px;
+        font-size: 1.8em;
+    }
+    #second {
+        padding-top: 300px;
+        font-size: 1.8em;
+    }
+  }
+
+  @media screen and (max-width: 358px) {
+
+    .blocPrincipal {
+        min-height: 300px;
+    }
+    #first {
+        padding-top: 10px;
+        font-size: 1.8em;
+    }
+    #second {
+        padding-top: 270px;
+        font-size: 1.8em;
+    }
+  }
+
+  @media screen and (max-width: 345px) {
+
+    .blocLink {
+        font-size: 0.8em;
+    }
+  }
+
+  @media screen and (max-width: 335px) {
+
+    .slider {
+        width: 200px;
+        height: 200px;
+    }
+    .slider img {
+        height: 200px;
+    }
+  }
+
+  @media screen and (max-width: 321px) {
+
+    .blocPrincipal {
+        min-height: 270px;
+    }
+    #first {
+        padding-top: 15px;
+        font-size: 1.8em;
+    }
+    #second {
+        padding-top: 235px;
+        font-size: 1.8em;
+    }
+  }
+
+  @media screen and (max-width: 291px) {
+
+    .blocPrincipal {
+        min-height: 230px;
+    }
+    #first {
+        padding-top: 15px;
+        font-size: 1.8em;
+    }
+    #second {
+        padding-top: 190px;
+        font-size: 1.8em;
+    }
+  }
+
+  @media screen and (max-width: 258px) {
+
+    .blocLink {
+        font-size: 0.6em;
+    }
+  }
+
+  @media screen and (max-width: 249px) {
+
+    .blocPrincipal {
+        min-height: 180px;
+    }
+    #first {
+        padding-top: 5px;
+        font-size: 1.5em;
+    }
+    #second {
+        padding-top: 160px;
+        font-size: 1.5em;
+    }
+  }
+
+  @media screen and (max-width: 235px) {
+
+    .slider {
+        width: 150px;
+        height: 150px;
+    }
+    .slider img {
+        height: 150px;
+    }
+  }
+
+  @media screen and (max-width: 207px) {
+
+    .blocPrincipal {
+        min-height: 140px;
+    }
+    #first {
+        padding-top: 0px;
+        font-size: 1.2em;
+    }
+    #second {
+        padding-top: 140px;
+        font-size: 1.2em;
+    }
+  }

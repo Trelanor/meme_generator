@@ -1,0 +1,12 @@
+{
+    "name": "root/meme_generator",
+    "authors": [
+        {
+            "name": "maximejanod",
+            "email": "maxime.j@codeur.online"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.0"
+    }
+}

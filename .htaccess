@@ -1,0 +1,10 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule ^$ index.php?page=home
+
+RewriteRule ^meme_(.*)$ index.php?page=create&base=$1.jpg
+
+RewriteRule ^generated/$ index.php?page=generated
+
+RewriteRule ^meme_result$ index.php?page=meme_result
